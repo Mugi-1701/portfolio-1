@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUGILAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .navbar {
+
+            background-color: #858080;
+            color: black;
+            height: 50px;
+            padding-top: 20px;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .nav1 li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-left: 15px;
+
+
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav1 a:hover {
+            animation: blink 1s infinite;
+            color: white;
+
+
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hero {
+            background-color: black;
+            color: rgb(133, 128, 128);
+            height: 65vh;
+        }
+
+        .img1 {
+            max-width: 90%;
+            height: auto;
+            margin-top: 30px;
+            border-radius: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: static;
+        }
+
+
+        .intro {
+            width: 50%;
+            text-align: center;
+            height: 50%;
+            padding-top: 10%;
+            font-size: x-large;
+        }
+
+        .intro h1 {
+            font-family: "Cedarville Cursive", cursive;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        span {
+            text-decoration: underline;
+
+
+        }
+
+        .img1 {
+            width: 400px;
+            height: 500px;
+            position: absolute;
+            top: 100px;
+            left: 70%;
+            border-radius: 40px;
+        }
+
+        hr {
+            border: dotted #858080 6px;
+            border-bottom: none;
+            width: 3%;
+            margin: 50px auto;
+        }
+
+        .abt {
+
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+            font-style: oblique;
+            text-shadow: 0 0 15px rgb(254, 135, 0);
+            padding: 30px;
+
+
+
+        }
+
+        .abt-1 {
+
+            background-color: rgb(0, 0, 0);
+            color: #858080;
+            text-align: center;
+            border-radius: 40px 40px 40px 40px;
+            box-shadow: 0 0 15px rgb(254, 135, 0);
+            width: 750px;
+            justify-self: center
+        }
+
+        .think {
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .think-2 {
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .skills-1 {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            margin-top: 60px;
+
+        }
+
+        .skills {
+            background-color: black;
+            color: #858080;
+            padding: 20px;
+            border-radius: 20px 20px 20px 20px;
+            width: 250px;
+            box-shadow: 0 0 15px rgb(254, 135, 0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .skills:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgb(254, 135, 0), 0 0 10px #fff;
+            cursor: pointer;
+        }
+
+        h3 {
+            margin-top: 0px;
+            font-size: xx-large;
+        }
+
+        .sk li {
+            padding: 10px;
+            list-style: none;
+            font-size: x-large;
+            color: #a49484;
+        }
+
+        .fe {
+            width: 20px;
+            height: 20px;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        .res {
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            height: auto;
+            font-size: large;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 30px;
+            background-color: black;
+            box-shadow: 0 0 15px rgb(254, 135, 0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .res:hover {
+            box-shadow: 0 0 20px rgb(254, 135, 0);
+            transform: scale(1.03);
+        }
+
+        .resume {
+            color: #858080;
+            font-size: medium;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+
+        .download-btn {
+            color: #858080;
+            padding: 15px;
+            height: 50px;
+
+
+        }
+
+        .sih {
+            box-shadow: 0 0 15px rgb(254, 135, 0);
+            width: 600px;
+            padding: 30px;
+            justify-self: center;
+            margin-top: 50px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .sih .sihhed {
+            color: #a49484;
+
+            font-size: x-large;
+            margin-bottom: 0%;
+        }
+
+        .time {
+            color: #a49484;
+            font-size: small;
+            margin-top: 0%;
+            position: relative;
+            top: 0px;
+            left: 30px;
+
+        }
+
+        .des {
+            color: #858080;
+            font-size: larger;
+        }
+
+        .title {
+            text-decoration: none;
+            color: rgb(254, 135, 0)
+        }
+
+        .proto {
+            color: rgb(254, 135, 0);
+        }
+
+        .cert {
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+            justify-content: center;
+            justify-self: center
+        }
+
+        .certimg {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+
+        /* Modal background */
+        .img-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal image */
+        .modal-content {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #fff;
+            animation: zoomIn 0.3s ease-in-out;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Optional animation */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .certimg {
+            width: 200px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .certimg:hover {
+            animation: blink 0.8s infinite;
+            transform: scale(1.03);
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .cert {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        .footer {
+            color: black;
+            font-size: xx-large;
+        }
+
+        .foot {
+            background-color: rgb(254, 135, 0);
+            height: 200px;
+            padding: 20px;
+            justify-self: center;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .footimg {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .intro {
+                width: 80%;
+                font-size: large;
+            }
+
+            .abt-1,
+            .sih,
+            .res,
+            .cert {
+                width: 90%;
+            }
+
+            .cert {
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .nav1 {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills-1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills {
+                width: 90%;
+            }
+
+            .img1 {
+                width: 90%;
+            }
+
+            .intro {
+                width: 90%;
+                padding-top: 40px;
+                font-size: medium;
+            }
+
+            .foot {
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            h1,
+            h2,
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .think,
+            .think-1,
+            .think-2 {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 1.2rem;
+            }
+
+            .footimg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .certimg {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="port">
+        <div class="navbar">
+            <nav>
+                MUGI
+                <ul class="nav1">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skills">skill</a></li>
+                    <li><a href="#contact">contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="intro">
+            <h1>I'm Mugilan</h1>
+            <h2>a <span class="auto-type"></span> developer</h2>
+            <p class="think">Enthusiastic Learner | Tech Explorer <br>
+                Turning ideas into digital reality through design and development.</p>
+        </div>
+
+        <img src="./WhatsApp Image 2025-05-13 at 14.45.40_f334aa19.jpg" alt="" class="img1">
+
+    </div>
+    <hr>
+    <div id="about" class="About-Me">
+        <h1 class="abt">About Me</h1>
+
+
+        <div class="abt-1">
+
+            <p class="think">HELLO, I'M MUGILAN a passionate Artificial Intelligence🤖 and DataScience📈 Enthusiast.
+            </p>
+            <br>
+            <p class="think-1">
+                🎓Currently pursuing B.Tech in AI & DS, Over Time, I've Built Skills in FullStack Web
+                development👨‍💻,
+                MicroSoft Excel📄, SQL,
+                PostgreSQL🛢️, DBMS, Machine Learning🤖, Love to built user-friendly responsive websites and passionate
+                Guitarist🎸 and Footballer⚽
+            </p><br>
+            <p class="think-2">
+                "⚙️ Innovation begins where comfort ends — it's the 🚀 courage to build what doesn't exist yet. 💡"
+            </p>
+        </div>
+    </div>
+
+    </div>
+    <hr>
+    <h2 id="skills" class="abt">My Skills</h2>
+    <div class="skills-1">
+
+        <div class="skills frontend">
+
+            <h3 class="fet">🖥️Front-End</h3>
+            <ul class="sk">
+                <li><img class="fe" src="./html-5.png" alt=""> HTML</li>
+                <li><img class="fe" src="./css3.png" alt="">CSS</li>
+                <li><img class="fe" src="./js.webp" alt="">JavaScript</li>
+                <li><img class="fe" src="./icons8-react-16.png" alt="">React</li>
+            </ul>
+        </div>
+        <div class="skills backend">
+
+            <h3 class="be">🗄️Back-End</h3>
+            <ul class="sk">
+                <li><img class="fe" src="./nodejs.png" alt="">Node.js</li>
+                <li><img class="fe" src="./expressjs.png" alt="">Express.js</li>
+                <li><img class="fe" src="./api.png" alt="">API's</li>
+                <li><img class="fe" src="./sql.png" alt="">SQL</li>
+                <li><img class="fe" src="./postgresql.png" alt="">PostgreSQL</li>
+
+            </ul>
+        </div>
+        <div class="skills tools">
+            <h3 class="to">🛠️Tools</h3>
+            <ul class="sk">
+                <li><img class="fe" src="ai.png" alt="">AI tools</li>
+                <li><img class="fe" src="github.png" alt="">GitHub</li>
+                <li><img class="fe" src="git.png" alt="">Git</li>
+                <li><img class="fe" src="msoffice.png" alt="">Microsoft Office</li>
+                <li><img class="fe" src="vscode.png" alt="">VS Code</li>
+                <li><img class="fe" src="canva.png" alt="">Canva</li>
+                <li><img class="fe" src="postman.png" alt="">PostMan</li>
+
+            </ul>
+        </div>
+
+
+    </div>
+    <hr>
+
+    <h2 class="abt">RESUME HERE!🙋‍♂️</h2>
+    <div class="res">
+        <a href="./MUGILAN_RES.pdf" download class="download-btn"><img class="fe" src="./pdf.png" alt=""> Download
+            Resume (PDF)</a>
+
+    </div>
+    <hr>
+    <h2 class="abt">Accomplisment Projects</h2>
+    <div class="sih">
+        <h3 class="sihhed">🧠SMART INDIA HACKATHON</h3><br>
+        <p class="time">NOV-2024</p>
+        <p class="des"><span class="title">TITLE: </span>Wearable Sensor with Integrated AI for
+            Prevention of Women Harassment, Child Kidnapping
+            & Falls of Elderly People</p>
+    </div>
+    <div class="sih">
+        <h3 class="sihhed">🧠MSME</h3>
+        <p class="time">OCT-2024</p>
+        <p class="des"><span class="title">TITLE: </span>Interconnected Health Record Across
+            Multiple Hospitals</p>
+        <a href="https://healthrecordshari.vercel.app/" class="proto">View prototype website🌐</a>
+    </div>
+    <hr>
+    <h2 class="abt">Certifications</h2>
+    <div class="cert">
+
+        <img class="certimg" src="./certimg/ai-first_software_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/exp_ML_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/generative_AI_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/intro_openai_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/mugi_DA_microsoft_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/openai_generative3_page-0001.jpg" alt="">
+        <img class="certimg" src="./certimg/prompt_page-0001.jpg" alt="">
+    </div>
+    <!-- Modal -->
+    <div id="imgModal" class="img-modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <hr>
+    <div class="foot" id="contact">
+        <h2 class="footer">Let's Connect</h2>
+        <a href="https://www.linkedin.com/in/mugi17"><img class="footimg" src="./in.png" alt=""></a>
+        <a href="https://github.com/mugi17"><img class="footimg" src="./github.png" alt=""></a>
+        <a href="mailto:mugi02gk@gmail.com"><img class="footimg" src="./mail.png" alt=""></a>
+        <a href="https://wa.me/+918778930352"><img class="footimg" src="./icons8-whatsapp-50.png" alt=""></a>
+        <footer>
+            <p>© 2025 MUGILAN. 📭All rights reserved.</p>
+        </footer>
+    </div>
+
+
+
+
+    <!-- Include Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Your custom JS file -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
