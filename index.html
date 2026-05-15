@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,54 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUGILAN</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            overflow-x: hidden;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: black;
-        }
-
-        .navbar {
-
-            background-color: #858080;
-            color: black;
-            height: 50px;
-            padding-top: 20px;
-
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 20px;
-            font-size: larger;
-            font-weight: bold;
-        }
-
-        .nav1 li {
-            list-style: none;
-            display: inline-block;
-            margin-left: 20px;
-            margin-right: 20px;
-            padding-left: 15px;
-
-
-
-
+            color: #858080;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
         }
 
         a {
@@ -60,162 +35,169 @@
             color: black;
         }
 
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #858080;
+            width: 100%;
+            padding: 15px 0;
+            
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        .nav1 li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        .nav1 a {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
         .nav1 a:hover {
-            animation: blink 1s infinite;
             color: white;
-
-
         }
 
-        @keyframes blink {
+        /* ================= MOBILE MENU ================= */
 
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-
-
-            50% {
-                opacity: 0;
-            }
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: black;
         }
+
+        /* ================= HERO SECTION ================= */
 
         .hero {
-            background-color: black;
-            color: rgb(133, 128, 128);
-            height: 65vh;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 80px 40px;
+            flex-wrap: wrap;
         }
-
-        .img1 {
-            max-width: 90%;
-            height: auto;
-            margin-top: 30px;
-            border-radius: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            position: static;
-        }
-
 
         .intro {
-            width: 50%;
-            text-align: center;
-            height: 50%;
-            padding-top: 10%;
-            font-size: x-large;
+            max-width: 600px;
         }
 
         .intro h1 {
             font-family: "Cedarville Cursive", cursive;
-            font-weight: 400;
-            font-style: normal;
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
 
+        .intro h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
 
         span {
             text-decoration: underline;
-
-
         }
 
         .img1 {
-            width: 400px;
-            height: 500px;
-            position: absolute;
-            top: 100px;
-            left: 70%;
+            width: 420px;
+            max-width: 100%;
             border-radius: 40px;
         }
 
         hr {
-            border: dotted #858080 6px;
+            border: dotted #858080 8px;
             border-bottom: none;
             width: 3%;
             margin: 50px auto;
         }
 
+        /* ================= ABOUT ================= */
+
         .abt {
-
             text-align: center;
-            font-weight: 900;
             font-size: 2rem;
-            font-style: oblique;
-            text-shadow: 0 0 15px rgb(254, 135, 0);
             padding: 30px;
-
-
-
+            font-style: oblique;
+            color: #0b0b0b;
+            text-shadow: 0 0 15px rgb(254, 135, 0);
         }
-
         .abt-1 {
-
-            background-color: rgb(0, 0, 0);
-            color: #858080;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
             text-align: center;
-            border-radius: 40px 40px 40px 40px;
+            padding: 30px;
+            border-radius: 30px;
             box-shadow: 0 0 15px rgb(254, 135, 0);
-            width: 750px;
-            justify-self: center
         }
 
-        .think {
-            padding-top: 30px;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
+        .think,
+        .think-1,
         .think-2 {
-            padding-bottom: 30px;
-            padding-left: 30px;
-            padding-right: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
+
+        /* ================= SKILLS ================= */
 
         .skills-1 {
             display: flex;
-            gap: 20px;
-            justify-content: space-around;
-            margin-top: 60px;
-
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
         .skills {
-            background-color: black;
-            color: #858080;
-            padding: 20px;
-            border-radius: 20px 20px 20px 20px;
-            width: 250px;
+            width: 280px;
+            padding: 25px;
+            border-radius: 20px;
             box-shadow: 0 0 15px rgb(254, 135, 0);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+            transition: 0.3s ease;
         }
 
         .skills:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 25px rgb(254, 135, 0), 0 0 10px #fff;
-            cursor: pointer;
         }
 
-        h3 {
-            margin-top: 0px;
-            font-size: xx-large;
+        .skills h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         .sk li {
-            padding: 10px;
             list-style: none;
-            font-size: x-large;
-            color: #a49484;
+            padding: 10px 0;
+            font-size: 1.2rem;
         }
 
         .fe {
             width: 20px;
             height: 20px;
-            margin-top: 10px;
             margin-right: 5px;
         }
-
         .res {
             text-align: center;
             width: 90%;
@@ -250,120 +232,62 @@
 
         }
 
+
+        /* ================= PROJECTS / PARTICIPATIONS ================= */
+
         .sih {
-            box-shadow: 0 0 15px rgb(254, 135, 0);
-            width: 600px;
+            width: 80%;
+            max-width: 700px;
+            margin: 40px auto;
             padding: 30px;
-            justify-self: center;
-            margin-top: 50px;
-            border-radius: 20px 20px 20px 20px;
-        }
-
-        .sih .sihhed {
-            color: #a49484;
-
-            font-size: x-large;
-            margin-bottom: 0%;
-        }
-
-        .time {
-            color: #a49484;
-            font-size: small;
-            margin-top: 0%;
-            position: relative;
-            top: 0px;
-            left: 30px;
-
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgb(254, 135, 0);
         }
 
         .des {
-            color: #858080;
-            font-size: larger;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .title {
-            text-decoration: none;
-            color: rgb(254, 135, 0)
-        }
-
+        .title,
         .proto {
             color: rgb(254, 135, 0);
         }
 
-        .cert {
+        /* ================= CERTIFICATIONS ================= */
+
+       .cert {
             display: flex;
             flex-wrap: wrap;
             width: 700px;
             justify-content: center;
             justify-self: center
         }
-
-        .certimg {
+         .certimg {
             width: 200px;
             height: auto;
             margin: 10px;
-        }
-
-        /* Modal background */
-        .img-modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Modal image */
-        .modal-content {
-            max-width: 90%;
-            max-height: 85%;
-            border-radius: 12px;
-            box-shadow: 0 0 20px #fff;
-            animation: zoomIn 0.3s ease-in-out;
-        }
-
-        /* Close button */
-        .close-btn {
-            position: absolute;
-            top: 30px;
-            right: 50px;
-            font-size: 40px;
-            font-weight: bold;
-            color: white;
+            border-radius: 10px;
             cursor: pointer;
+             transition: 0.3s ease;
+             display: block;
+
+
         }
+        
+         
+       
 
-        /* Optional animation */
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.7);
-                opacity: 0;
-            }
+        
+        .certimg:hover{
+            box-shadow: 0 0 15px rgb(254, 135, 0);
 
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .certimg {
-            width: 200px;
-            margin: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
         }
 
         .certimg:hover {
-            animation: blink 0.8s infinite;
-            transform: scale(1.03);
+            transform: scale(1.05);
+            animation: blink 1s infinite;
         }
-
         @keyframes blink {
 
             0%,
@@ -376,467 +300,203 @@
             }
         }
 
-        .cert {
-            display: flex;
-            flex-wrap: wrap;
+        /* ================= MODAL ================= */
+
+        .img-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            z-index: 999;
         }
 
-
-        .footer {
-            color: black;
-            font-size: xx-large;
+        .modal-content {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 10px;
         }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* ================= FOOTER ================= */
 
         .foot {
             background-color: rgb(254, 135, 0);
-            height: 200px;
-            padding: 20px;
-            justify-self: center;
-            width: 100%;
+            color: black;
             text-align: center;
+            padding: 40px 20px;
+        }
 
+        .footer {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         .footimg {
             width: 40px;
-            height: 40px;
             margin: 10px;
         }
 
-        html {
-            scroll-behavior: smooth;
+        footer p {
+            margin-top: 15px;
+            font-weight: bold;
         }
 
-        @media screen and (max-width: 1024px) {
-            .intro {
-                width: 80%;
-                font-size: large;
-            }
-
-            .abt-1,
-            .sih,
-            .res,
-            .cert {
-                width: 90%;
-            }
-
-            .cert {
-                justify-content: center;
-            }
-        }
+        /* ================= MOBILE RESPONSIVE ================= */
 
         @media screen and (max-width: 768px) {
-        
-            .skills-1 {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav1 {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 220px;
+                background-color: #858080;
+                display: flex;
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transition: all 0.4s ease;
+                border-radius: 0 0 0 15px;
+            }
+
+            .nav1.active {
+                max-height: 300px;
+                opacity: 1;
+                padding: 15px 0;
+            }
+
+            .nav1 li {
+                display: block;
+                margin: 15px 0;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .intro {
+                text-align: center;
+            }
+
+            .intro h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro h2 {
+                font-size: 2rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+            .img1 {
+                width: 280px;
             }
 
             .skills {
                 width: 90%;
             }
 
-            .img1 {
+            .sih {
                 width: 90%;
             }
 
-            .intro {
+            .abt-1 {
                 width: 90%;
-                padding-top: 40px;
-                font-size: medium;
-            }
-
-            .foot {
-                padding: 20px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-
-            h1,
-            h2,
-            h3 {
-                font-size: 1.5rem;
-            }
-
-            .think,
-            .think-1,
-            .think-2 {
-                font-size: 1rem;
-                padding: 10px;
-            }
-
-            .footer {
-                font-size: 1.2rem;
-            }
-
-            .footimg {
-                width: 30px;
-                height: 30px;
             }
 
             .certimg {
                 width: 90%;
+                max-width: 250px;
             }
         }
-        @media screen and (max-width: 1200px) {
-
-    .img1 {
-        width: 320px;
-        height: auto;
-        left: 65%;
-        top: 120px;
-    }
-
-    .intro {
-        width: 55%;
-        padding-top: 12%;
-    }
-
-    .abt-1,
-    .sih,
-    .cert {
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 992px) {
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .intro {
-        width: 100%;
-        padding-top: 20px;
-        font-size: large;
-    }
-
-    .img1 {
-        position: static;
-        width: 300px;
-        height: auto;
-        margin-top: 30px;
-    }
-
-    .skills-1 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .skills {
-        width: 300px;
-    }
-
-    .abt-1,
-    .sih,
-    .cert,
-    .res {
-        width: 90%;
-    }
-
-    .certimg {
-        width: 180px;
-    }
-
-    hr {
-        width: 10%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .navbar {
-        height: auto;
-        padding: 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .nav1 li {
-        display: block;
-        margin: 10px 0;
-        padding: 0;
-    }
-
-    .hero {
-        padding: 20px;
-    }
-
-    .intro h1 {
-        font-size: 2.2rem;
-    }
-
-    .intro h2 {
-        font-size: 1.5rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
-    .img1 {
-        width: 250px;
-        border-radius: 25px;
-    }
-
-    .abt {
-        font-size: 1.8rem;
-    }
-
-    .think,
-    .think-1,
-    .think-2 {
-        font-size: 1rem;
-        padding: 15px;
-    }
-
-    .skills-1 {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .skills {
-        width: 90%;
-    }
-
-    .sk li {
-        font-size: 1.1rem;
-    }
-
-    .sih {
-        padding: 20px;
-    }
-
-    .des {
-        font-size: 1rem;
-    }
-
-    .cert {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .certimg {
-        width: 140px;
-    }
-
-    .footer {
-        font-size: 1.5rem;
-    }
-
-    .foot {
-        height: auto;
-        padding: 30px 15px;
-    }
-
-    .footimg {
-        width: 35px;
-        height: 35px;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    .intro h1 {
-        font-size: 1.8rem;
-    }
-
-    .intro h2 {
-        font-size: 1.2rem;
-    }
-
-    .intro p {
-        font-size: 0.9rem;
-    }
-
-    .img1 {
-        width: 200px;
-    }
-
-    .abt {
-        font-size: 1.5rem;
-    }
-
-    .skills {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .sk li {
-        font-size: 1rem;
-    }
-
-    .certimg {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .download-btn {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    .footer {
-        font-size: 1.2rem;
-    }
-
-    .footimg {
-        width: 28px;
-        height: 28px;
-    }
-
-    hr {
-        width: 15%;
-    }
-}
-/* =========================
-   MOBILE NAVBAR
-========================= */
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px) {
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        width: 100%;
-
-        padding: 20px;
-
-        position: relative;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 2.3rem;
-        cursor: pointer;
-    }
-
-    .nav1 {
-        position: absolute;
-
-        top: 70px;
-        right: 0;
-
-        width: 220px;
-
-        background-color: #858080;
-
-        display: flex;
-        flex-direction: column;
-
-        text-align: center;
-
-        overflow: hidden;
-
-        max-height: 0;
-
-        opacity: 0;
-
-        transition: all 0.4s ease;
-
-        border-radius: 0 0 0 15px;
-    }
-
-    .nav1.active {
-        max-height: 300px;
-        opacity: 1;
-        padding: 15px 0;
-    }
-
-    .nav1 li {
-        display: block;
-        margin: 15px 0;
-    }
-}
     </style>
 </head>
 
 <body>
-    <div class="port">
-        <div class="navbar">
+
+    <div class="navbar">
         <nav>
 
-    <h2 class="logo">MUGI</h2>
+            <h2 class="logo">MUGI</h2>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="nav1" id="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skill</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+
+        </nav>
     </div>
 
-    <ul class="nav1" id="nav-links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#skills">skill</a></li>
-        <li><a href="#contact">contact</a></li>
-    </ul>
-
-</nav>
-        </div>
-    </div>
     <div class="hero">
+
         <div class="intro">
             <h1>I'm Mugilan</h1>
             <h2>a <span class="auto-type"></span> developer</h2>
-            <p class="think">Enthusiastic Learner | Tech Explorer <br>
-                Turning ideas into digital reality through design and development.</p>
+
+            <p>
+                Enthusiastic Learner | Tech Explorer <br>
+                Turning ideas into digital reality through design and development.
+            </p>
         </div>
 
-        <img src="./WhatsApp Image 2025-05-13 at 14.45.40_f334aa19.jpg" alt="" class="img1">
+        <img src="./WhatsApp Image 2025-05-13 at 14.45.40_f334aa19.jpg" alt="Mugilan" class="img1">
 
     </div>
-    <hr>
-    <div id="about" class="About-Me">
-        <h1 class="abt">About Me</h1>
 
+    <hr>
+
+    <div id="about">
+
+        <h1 class="abt">About Me</h1>
 
         <div class="abt-1">
 
-            <p class="think">HELLO, I'M MUGILAN a passionate Artificial Intelligence🤖 and DataScience📈 Enthusiast.
+            <p class="think">
+                HELLO, I'M MUGILAN a passionate Artificial Intelligence and DataScience📈 Enthusiast.
             </p>
+
             <br>
+
             <p class="think-1">
-                🎓Currently pursuing B.Tech in AI & DS, Over Time, I've Built Skills in FullStack Web
-                development👨‍💻,
-                MicroSoft Excel📄, SQL,
-                PostgreSQL🛢️, DBMS, Machine Learning🤖, Love to built user-friendly responsive websites and passionate
-                Guitarist🎸 and Footballer⚽
-            </p><br>
+                🎓Currently pursuing B.Tech in AI & DS, Over Time, I've Built Skills in FullStack Web development👨‍💻,
+                MicroSoft Excel📄, SQL, PostgreSQL🛢️, DBMS, Machine Learning🤖.
+            </p>
+
+            <br>
+
             <p class="think-2">
                 "⚙️ Innovation begins where comfort ends — it's the 🚀 courage to build what doesn't exist yet."
             </p>
+
         </div>
     </div>
-
-    </div>
+     </div>
     <hr>
     <h2 id="skills" class="abt">My Skills</h2>
     <div class="skills-1">
@@ -881,10 +541,11 @@
     </div>
     <hr>
 
-    <h2 class="abt">RESUME HERE!🙋‍♂️</h2>
+     <h2 class="abt">RESUME HERE!🙋‍♂️</h2>
     <div class="res">
         <a href="./Mugilan.res.pdf" download class="download-btn"><img class="fe" src="./pdf.png" alt=""> Download
             Resume (PDF)</a>
+
 
     </div>
     <hr>
@@ -944,11 +605,7 @@
 
 
 
-
-    <!-- Include Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- Your custom JS file -->
     <script src="index.js"></script>
 
 </body>
