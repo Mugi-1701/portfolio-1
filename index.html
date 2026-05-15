@@ -428,17 +428,7 @@
         }
 
         @media screen and (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-
-            .nav1 {
-                flex-direction: column;
-                gap: 10px;
-            }
-
+        
             .skills-1 {
                 flex-direction: column;
                 align-items: center;
@@ -491,21 +481,325 @@
                 width: 90%;
             }
         }
+        @media screen and (max-width: 1200px) {
+
+    .img1 {
+        width: 320px;
+        height: auto;
+        left: 65%;
+        top: 120px;
+    }
+
+    .intro {
+        width: 55%;
+        padding-top: 12%;
+    }
+
+    .abt-1,
+    .sih,
+    .cert {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .intro {
+        width: 100%;
+        padding-top: 20px;
+        font-size: large;
+    }
+
+    .img1 {
+        position: static;
+        width: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .skills-1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills {
+        width: 300px;
+    }
+
+    .abt-1,
+    .sih,
+    .cert,
+    .res {
+        width: 90%;
+    }
+
+    .certimg {
+        width: 180px;
+    }
+
+    hr {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav1 li {
+        display: block;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .img1 {
+        width: 250px;
+        border-radius: 25px;
+    }
+
+    .abt {
+        font-size: 1.8rem;
+    }
+
+    .think,
+    .think-1,
+    .think-2 {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .skills-1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .skills {
+        width: 90%;
+    }
+
+    .sk li {
+        font-size: 1.1rem;
+    }
+
+    .sih {
+        padding: 20px;
+    }
+
+    .des {
+        font-size: 1rem;
+    }
+
+    .cert {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .certimg {
+        width: 140px;
+    }
+
+    .footer {
+        font-size: 1.5rem;
+    }
+
+    .foot {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .footimg {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .img1 {
+        width: 200px;
+    }
+
+    .abt {
+        font-size: 1.5rem;
+    }
+
+    .skills {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .sk li {
+        font-size: 1rem;
+    }
+
+    .certimg {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 1.2rem;
+    }
+
+    .footimg {
+        width: 28px;
+        height: 28px;
+    }
+
+    hr {
+        width: 15%;
+    }
+}
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        padding: 20px;
+
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2.3rem;
+        cursor: pointer;
+    }
+
+    .nav1 {
+        position: absolute;
+
+        top: 70px;
+        right: 0;
+
+        width: 220px;
+
+        background-color: #858080;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        overflow: hidden;
+
+        max-height: 0;
+
+        opacity: 0;
+
+        transition: all 0.4s ease;
+
+        border-radius: 0 0 0 15px;
+    }
+
+    .nav1.active {
+        max-height: 300px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
+    .nav1 li {
+        display: block;
+        margin: 15px 0;
+    }
+}
     </style>
 </head>
 
 <body>
     <div class="port">
         <div class="navbar">
-            <nav>
-                MUGI
-                <ul class="nav1">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skills">skill</a></li>
-                    <li><a href="#contact">contact</a></li>
+        <nav>
 
-                </ul>
-            </nav>
+    <h2 class="logo">MUGI</h2>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul class="nav1" id="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skill</a></li>
+        <li><a href="#contact">contact</a></li>
+    </ul>
+
+</nav>
         </div>
     </div>
     <div class="hero">
