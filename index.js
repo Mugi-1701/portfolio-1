@@ -29,6 +29,25 @@ window.onclick = (e) => {
     modal.style.display = "none";
   }
 };
+
+document.querySelectorAll(".intern").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        modal.style.display = "flex";
+        modalImg.src = link.dataset.img;
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
